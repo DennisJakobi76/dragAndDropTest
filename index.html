@@ -8,7 +8,20 @@
 	<script src="./script.js" defer></script>
 	<title>Drag and Drop Test</title>
 </head>
-    <body>
-        Test
+    <body onload="updateHTML()">
+        <div
+            class="drag-area"
+            id="open"
+            ondrop="moveTo('open')"
+            ondragleave="removeHighlight('open')"
+            ondragover="allowDrop(event); highlight('open')"
+        ></div>
+        <div
+            class="drag-area"
+            id="closed"
+            ondrop="moveTo('closed')"
+            ondragleave="removeHighlight('closed')"
+            ondragover="allowDrop(event); highlight('closed')"
+        ></div>
     </body>
 </html>
